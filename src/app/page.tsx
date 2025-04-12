@@ -17,7 +17,7 @@ export default function Home() {
         }
 
         async function getTimestamp() {
-            const response = await fetch('http://localhost:3000/api/timestamp');
+            const response = await fetch('/api/timestamp');
             const json = await response.json();
             updateTimestamp(dayjs(json['created_at']));
         }
