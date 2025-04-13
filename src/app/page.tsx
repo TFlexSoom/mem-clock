@@ -5,6 +5,7 @@ import duration from "dayjs/plugin/duration";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -52,7 +53,7 @@ export default function Home() {
         <main className="flex flex-col h-full w-full text-black bg-linear-to-br from-cyan-600 to-blue-600">
             <nav className="flex flex-row bg-white py-4 px-4 items-center justify-between w-full rounded-md ">
                 <span className="text-black font-semibold text-lg">Of Potatos and Blabbers</span>
-                <a href="/reset" className=" bg-black rounded-lg py-2 px-4 text-white hover:cursor-pointer hover:shadow-xl">Reset Clock</a>
+                <Link href="/reset" className=" bg-black rounded-lg py-2 px-4 text-white hover:cursor-pointer hover:shadow-xl">Reset Clock</Link>
             </nav>
             <section className=" flex flex-col flex-grow items-center ">
                 <div className=" text-[#FAB972] text-[18em]"> {hours}:{minutes}:{seconds}.{milli} </div>

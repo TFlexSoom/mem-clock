@@ -1,12 +1,13 @@
 import Form from 'next/form'
 import { resetTimer } from "./actions";
+import Link from 'next/link';
 
 export default function ResetPage() {
     return (
         <main className="flex flex-col h-full w-full text-black bg-linear-to-br from-cyan-600 to-blue-600">
             <nav className="flex flex-row bg-white py-4 px-4 items-center justify-between w-full rounded-md ">
                 <span className="text-black font-semibold text-lg">Of Potatos and Blabbers</span>
-                <a href="/" className=" bg-black rounded-lg py-2 px-4 text-white hover:cursor-pointer hover:shadow-xl">Back To Clock</a>
+                <Link href="/" className=" bg-black rounded-lg py-2 px-4 text-white hover:cursor-pointer hover:shadow-xl">Back To Clock</Link>
             </nav>
             <section className=" flex flex-col flex-grow items-center pt-48 ">
                 <Form
